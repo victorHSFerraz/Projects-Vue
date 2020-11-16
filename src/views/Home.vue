@@ -24,7 +24,7 @@
     <button class="botao%" @click="proximaFuncao('porcentagem')">%</button>
     <br>
     <button class="botaoC" @click="proximaFuncao('apagar')">C</button>
-    <button class="botaoPonto" @click="proximaFuncao('ponto')">.</button>
+    <button class="botaoPonto" @click="alertaValor('.')">.</button>
     <button class="botao=" @click="proximaFuncao('igual')">=</button>
     <br>
     <br>
