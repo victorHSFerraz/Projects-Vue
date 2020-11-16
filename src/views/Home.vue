@@ -104,6 +104,7 @@ export default {
       }else if(valor === 'igual') {
         if(this.Acao === 1) {
           this.calculadoraDisplay = Number(this.x) + Number(this.y)
+          this.posicaoAtual = 1
         } 
       }if(valor === 'apagar') {
         valor
