@@ -105,9 +105,68 @@ export default {
         if(this.Acao === 1) {
           this.calculadoraDisplay = Number(this.x) + Number(this.y)
           this.posicaoAtual = 1
+        }
+        else if(this.Acao === 2) {
+          this.calculadoraDisplay = Number(this.x) - Number(this.y)
+          this.posicaoAtual = 1
+        }
+        else if(this.Acao === 3) {
+          this.calculadoraDisplay = Number(this.x) * Number(this.y)
+          this.posicaoAtual = 1
+        }
+        else if(this.Acao === 4) {
+          this.calculadoraDisplay = Number(this.x) / Number(this.y)
+          this.posicaoAtual = 1
         } 
-      }if(valor === 'apagar') {
-        valor
+        else if(this.Acao === 5) {
+          this.calculadoraDisplay = (Number(this.x) / 100) * Number(this.y)
+          this.posicaoAtual = 1
+        }
+      }else if(valor === 'apagar') {
+        this.x = 0
+        this.y = 0
+        this.calculadoraDisplay = ""
+        this.posicaoAtual = 1
+      }else if(valor === 'menos') {
+        this.Acao = 2
+        if(this.posicaoAtual === 1){
+          this.x = this.calculadoraDisplay
+          this.posicaoAtual = 2
+        }else{
+          this.y = this.calculadoraDisplay
+          this.posicaoAtual = 3
+        }
+        this.calculadoraDisplay = ""
+      }else if(valor === 'multiplicacao') {
+        this.Acao = 3
+        if(this.posicaoAtual === 1){
+          this.x = this.calculadoraDisplay
+          this.posicaoAtual = 2
+        }else{
+          this.y = this.calculadoraDisplay
+          this.posicaoAtual = 3
+        }
+        this.calculadoraDisplay = ""
+      }else if(valor === 'divisao') {
+        this.Acao = 4
+        if(this.posicaoAtual === 1){
+          this.x = this.calculadoraDisplay
+          this.posicaoAtual = 2
+        }else{
+          this.y = this.calculadoraDisplay
+          this.posicaoAtual = 3
+        }
+        this.calculadoraDisplay = ""
+      }else if(valor === 'porcentagem') {
+        this.Acao = 5
+        if(this.posicaoAtual === 1){
+          this.x = this.calculadoraDisplay
+          this.posicaoAtual = 2
+        }else{
+          this.y = this.calculadoraDisplay
+          this.posicaoAtual = 3
+        }
+        this.calculadoraDisplay = ""
       }
     }
   }  
