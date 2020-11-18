@@ -20,8 +20,6 @@
         <td class="tdBotao" style="border: 0; background-color: white"><button class="btn-grad" @click="excluirOperacao(item.calculadora_id)">Excluir</button></td>   
     </tr>
     </table>
-    <div class="oi">
-    noffaaaa que tudo</div>
   </div>
 </template>
 
@@ -38,7 +36,9 @@ th {
   color: white;
   height: 30px;
   width: 200px;
+  background-image: linear-gradient(to right, #FF512F 0%, #F09819  51%, #FF512F  100%);
 }
+
 table {
   border-collapse: collapse;
 }
@@ -77,7 +77,7 @@ button {
             padding: 15px 45px;
             text-align: center;
             text-transform: uppercase;
-            transition: 0.5s;
+            transition: 0.1s;
             background-size: 200% auto;
             color: white;            
             box-shadow: 0 0 20px #eee;
@@ -117,6 +117,7 @@ export default {
       console.log(res.data)
       window.location.reload()
     })
+    alert("Excluído com sucesso!");
     }
   }
 }

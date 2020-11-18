@@ -44,18 +44,21 @@ h1 {
 
 button {
   background-color: rgb(0, 0, 0);
-  border: 5px solid rgb(63, 59, 59);
-  color:rgb(231, 108, 7);
+  border: 5px solid rgb(56, 52, 52);
+  color:rgb(250, 114, 3);
   padding: 20px 30px;
+  border-radius: 15px;
   text-align: center;
   font-size: 30px;
   margin: 3px 3px;
   cursor: pointer;
   width: 100px;
+  text-shadow: 1px 1px 5px #f80808;
 }
   button:hover{
     background-color: rgb(19, 18, 17);
     border: 5px solid rgb(228, 92, 1);
+    text-shadow: 0 0 5px #f86707, 0 0 9px #e00d0d;
   } 
   
 
@@ -64,6 +67,7 @@ button.resultado {
   border: 5px solid rgb(63, 59, 59);
   width: 458px;
   height: 100px;
+  border-radius: 15px;
   color: rgb(255, 255, 255);
   font-size: 50px;
   text-align: center;
@@ -102,6 +106,7 @@ export default {
       request.then(res => {
         console.log(res.data)
       })
+      alert("Salvo com sucesso!")
    }, 
     alertaValor(valor){
       this.calculadoraDisplay = this.calculadoraDisplay+valor      

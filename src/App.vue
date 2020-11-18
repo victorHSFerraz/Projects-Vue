@@ -21,9 +21,10 @@
 #nav {
   padding: 30px;
   position: fixed;
-  width: 100%;
+  width: 95%;
   background: #fff;
   top: 0;
+  align-self: center;
 
 }
 
