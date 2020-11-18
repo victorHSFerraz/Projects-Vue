@@ -26,6 +26,7 @@
     <button class="botaoC" @click="proximaFuncao('apagar')">C</button>
     <button class="botaoPonto" @click="alertaValor('.')">.</button>
     <button class="botao=" @click="proximaFuncao('igual')">=</button>
+    <button class="botaoTeste" @click="salvarApi()">S</button>
     <br>
     <br>
     
@@ -71,6 +72,9 @@ button.resultado {
 </style>>
 
 <script>
+import Vue from 'vue'
+import vueResource from 'vue-resource'
+Vue.use(vueResource)
 export default {
   data () {
     return {
@@ -81,7 +85,24 @@ export default {
       Acao: 1
     }
   },
+  mounted (){
+    let request = this.$http.get('https://dev.api.amanet.com.br/v1/Operacao/')
+    request.then(res => {
+      console.log(res.data)
+    })
+  },
   methods:{
+    salvarApi(){
+      let request = this.$http.post('https://dev.api.amanet.com.br/v1/Calculadora/Calculo', {
+	"Valor_x": Number(this.x),
+	"Valor_y": Number(this.y),
+	"Usuario_id": 221,
+	"Operacao_id": this.Acao
+})
+      request.then(res => {
+        console.log(res.data)
+      })
+   }, 
     alertaValor(valor){
       this.calculadoraDisplay = this.calculadoraDisplay+valor      
         if(this.posicaoAtual === 1){
