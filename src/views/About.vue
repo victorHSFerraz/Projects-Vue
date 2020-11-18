@@ -24,7 +24,7 @@
 </template>
 
 
-<style lang="scss">
+<style lang="scss" scoped>
 table, th, td {
   border: 0px solid rgb(0, 0, 0);
   color: rgb(0, 0, 0);
