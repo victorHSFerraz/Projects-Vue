@@ -45,7 +45,7 @@ h1 {
 button {
   background-color: rgb(0, 0, 0);
   border: 5px solid rgb(56, 52, 52);
-  color:rgb(250, 114, 3);
+  color:rgb(189, 185, 182);
   padding: 20px 30px;
   border-radius: 15px;
   text-align: center;
@@ -53,11 +53,12 @@ button {
   margin: 3px 3px;
   cursor: pointer;
   width: 100px;
-  text-shadow: 1px 1px 5px #f80808;
+  
 }
   button:hover{
     background-color: rgb(19, 18, 17);
     border: 5px solid rgb(228, 92, 1);
+    color: rgb(250, 142, 0);
     text-shadow: 0 0 5px #f86707, 0 0 9px #e00d0d;
   } 
   
@@ -71,6 +72,7 @@ button.resultado {
   color: rgb(255, 255, 255);
   font-size: 50px;
   text-align: center;
+  text-shadow: 0 0 5px #f86707, 0 0 9px #e00d0d;
 }
 
 </style>>

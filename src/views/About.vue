@@ -26,7 +26,7 @@
 
 <style lang="scss">
 table, th, td {
-  border: 1px solid rgb(0, 0, 0);
+  border: 0px solid rgb(0, 0, 0);
   color: rgb(0, 0, 0);
   font-size: 20px;
   width: 100px;
@@ -34,16 +34,18 @@ table, th, td {
 th {
   background-color: #e2610b;
   color: white;
-  height: 30px;
+  height: 10px;
   width: 200px;
-  background-image: linear-gradient(to right, #FF512F 0%, #F09819  51%, #FF512F  100%);
+  background-image: linear-gradient(to right, #f87000 0%, #fc7b02  51%, #f85c02  100%);
 }
 
 table {
   border-collapse: collapse;
+  
 }
 tr:hover {
-  background-color: #eee5e5;
+  background-color: rgb(248, 245, 245);
+  text-shadow: 0 0 1px #000000;
 }
 button {
   background-color: rgb(0, 0, 0);
